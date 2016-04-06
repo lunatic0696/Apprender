@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">Apprender</string>
+    <string name="dialog_option_yes">Sim</string>
+    <string name="dialog_option_no">Não</string>
+    <string name="dialog_option_ok">OK</string>
+    <string name="dialog_option_save">Salvar</string>
+    <string name="action_settings">Settings</string>
+    <string name="add_materia">+ Matéria</string>
+    <string name="del_materia">Del. Matéria</string>
+    <string name="dialog_add_materia">Deseja adicionar uma matéria?</string>
+    <string name="nome_materia">Nome</string>
+    <string name="sexo_aluno">Sexo</string>
+    <string name="escola_aluno">Escola</string>
+    <string name="media_escola_aluno">Média escolar</string>
+    <string name="media_pessoal_aluno">Média pessoal</string>
+    <string name="serie_aluno">Serie</string>
+    <string name="prof_materia">Professor</string>
+    <string name="salvar_materia_button">Salvar matéria</string>
+    <string name="dialog_deletar_materia">Deletar matéria?</string>
+    <string name="text_bimestre">Bimestre</string>
+    <string name="title_add_nota">Adicionar nota</string>
+    <string name="situation_prova_final">Você ficou de prova final! Esta é sua última chance!</string>
+    <string name="situaion_passou">Você passou!</string>
+    <string name="situation_reprovou">Você não passou nesta matéria...</string>
+    <string name="situation_mal">Sua média está baixa!, estude um pouco.</string>
+    <string name="situation_bom">Sua média está boa, continue assim!</string>
+    <string name="title_add_materia">Adicionar matéria</string>
+    <string-array name="nomes_notas">
+        <item>Primeira nota</item>
+        <item>Segunda nota</item>
+        <item>Recuperação</item>
+        <item>Média</item>
+    </string-array>
+
+</resources>
