@@ -81,8 +81,12 @@ public class BimestresActivity extends AppCompatActivity {
 
                                 float notaAInserir = -1.0f;
 
-                                if (!edt.getText().toString().equals(""))
+                                if (!edt.getText().toString().equals("")){
                                     notaAInserir = Float.parseFloat(edt.getText().toString());
+                                    if (notaAInserir >= 10.0f) {
+                                        dialog.dismiss();
+                                        Toast.makeText(BimestresActivity.this, "Adicione uma nota menor que dez", Toast.LENGTH_SHORT).show();}
+                                }
 
                                 switch (position) {
                                     case 2:
@@ -113,11 +117,11 @@ public class BimestresActivity extends AppCompatActivity {
 
                                     if (media < mediaAluno) {
                                         Snackbar.make(findViewById(R.id.activity_bimestres), "Você ficou com a média baixa, adicione a prova final!", Snackbar.LENGTH_LONG).show();
-                                    }else if (media >= mediaAluno){
+                                    } else if (media >= mediaAluno) {
                                         Snackbar.make(findViewById(R.id.activity_bimestres), "Sua média ficou boa neste bimestre!", Snackbar.LENGTH_LONG).show();
                                     }
 
-                                    if(bimestre.getNumero() == 4){
+                                    if (bimestre.getNumero() == 4) {
                                         daoMateria.inserirNotaFinal(media, false, materiaAtual);
                                     }
 
@@ -126,11 +130,11 @@ public class BimestresActivity extends AppCompatActivity {
 
                                     if (media < mediaAluno) {
                                         Snackbar.make(findViewById(R.id.activity_bimestres), "Sua média ficou baixa neste bimestre...", Snackbar.LENGTH_LONG).show();
-                                    }else if (media >= mediaAluno){
+                                    } else if (media >= mediaAluno) {
                                         Snackbar.make(findViewById(R.id.activity_bimestres), "Sua média ficou boa neste bimestre!", Snackbar.LENGTH_LONG).show();
                                     }
 
-                                    if(bimestre.getNumero() == 4){
+                                    if (bimestre.getNumero() == 4) {
                                         daoMateria.inserirNotaFinal(media, false, materiaAtual);
                                     }
                                 }
@@ -235,6 +239,9 @@ public class BimestresActivity extends AppCompatActivity {
                             float nota = -1.0f;
                             if (!edt.getText().toString().equals(""))
                                 nota = Float.parseFloat(edt.getText().toString());
+                                if(nota >= 10.0f){
+                                    dialog.dismiss();
+                                    Toast.makeText(BimestresActivity.this, "Adicione uma nota menor que dez", Toast.LENGTH_SHORT).show();}
                             daoMateria.inserirNotaFinal(nota, true, materiaAtual);
                             materiaAtual.calcularMedia();
                             Log.i("BimestresActivity", "SITUAÇÃO: médiaFinal: " + materiaAtual.getMediaFinal() + " // recup: " + nota);
